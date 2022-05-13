@@ -16,7 +16,7 @@ if (_getVehicle isKindOf "LandVehicle") then
 	_getVehicle allowDamage false;
 	_getVehicle setVectorUp surfaceNormal position _getVehicle;
 	_getVehicle setPosASL _getVehLoc;
-	uiSleep 1;
+	uiSleep 0.75;
 	_getVehicle allowDamage true;
 	hint "Vehicle Flipped!";
 } else {

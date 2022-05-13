@@ -1,3 +1,7 @@
 //fuck you
-#include "progress.hpp"
-#include "PR_Ex_PB.hpp"
+#include "Dialog\PR_Ex_PB.hpp"
+
+class CfgFunctions 
+{
+	#include "Functions.hpp"
+};
