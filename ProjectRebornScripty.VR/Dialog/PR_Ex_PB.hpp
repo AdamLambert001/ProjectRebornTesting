@@ -1,5 +1,31 @@
 #include "CCClass.h"
-class PR_Ex_PB
+class RscTitles {
+	class ExPBtitle 
+	{
+		idd = -1;
+		duration = 10;
+		class Controls
+		{
+			class RP_progressBar
+			{
+				type = 8;
+				idc = 1345;
+				x = 0.35545026;
+				y = 0.88607596;
+				w = 0.28909954;
+				h = 0.05696203;
+				style = 0;
+				colorBar[] = {0.102,0.302,0.102,1};
+				colorFrame[] = {0.102,0.102,0.102,1};
+				texture = "#(argb,8,8,3)color(1,1,1,1)";
+				onLoad = "uiNamespace setVariable ['PR_Progress_var',_this select 0]";
+			
+			};
+		
+		};
+	};
+};
+/*class PR_Ex_PB //old ADC controls
 {
 	idd = 1456;
 	
@@ -27,6 +53,6 @@ class PR_Ex_PB
 		
 	};
 	
-};
+};*/
 
 //Created with ADC (ArmA Dialog Creator)

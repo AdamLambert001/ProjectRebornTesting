@@ -16,7 +16,7 @@ if (!alive _unit) exitWith {};
 if !(isNull objectParent _unit) exitWith {hint "You are in a vehicle!"};
 if (damage _unit isEqualTo 0) exitWith {hint "You are on full health!"};
 
-createDialog "PR_Ex_PB"; //open progressBar
+"PR_Ex_PB" cutRsc ["ExPBtitle", "PLAIN", 0, false]; //open progressBar
 
 for "_i" from 0 to (_timeToHeal * 4) do 
 {
