@@ -9,5 +9,6 @@ class Wall_PRTests
 		class earplug {};
 		class setColour {};
 		class repair {};
+		class saveLoadout {};
 	};
 };
