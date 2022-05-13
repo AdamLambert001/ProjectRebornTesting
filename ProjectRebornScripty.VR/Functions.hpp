@@ -7,5 +7,6 @@ class Wall_PRTests
 		class unflip {};
 		class heal {};
 		class earplug {};
+		class setColour {};
 	};
 };

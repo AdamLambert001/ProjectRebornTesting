@@ -8,14 +8,15 @@ private _unit = player;
 private _initalTime = time;
 private _timeToHeal = 10;
 
-disableSerialization;
-
 if (!alive _unit) exitWith {};
 
 //Checking if player is in a vehicle and exits if they are in it, notifys they are in a vehicle
 if !(isNull objectParent _unit) exitWith {hint "You are in a vehicle!"};
 if (damage _unit isEqualTo 0) exitWith {hint "You are on full health!"};
 
+disableSerialization;
+
+//						Title	 Type  speed show map?
 "PR_Ex_PB" cutRsc ["ExPBtitle", "PLAIN", 0, false]; //open progressBar
 
 for "_i" from 0 to (_timeToHeal * 4) do 

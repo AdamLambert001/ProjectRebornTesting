@@ -11,7 +11,7 @@ private _getVehLoc = getPosASL _getVehicle;
 if (!alive _unit) exitWith {};
 if !(isNull objectParent _unit) exitWith {hint "You are in a vehicle!"};
 
-if (_getVehicle isKindOf "LandVehicle") then 
+if (_getVehicle isKindOf "LandVehicle" && {player distance _getVehicle < 10} ) then 
 {
 	_getVehicle allowDamage false;
 	_getVehicle setVectorUp surfaceNormal position _getVehicle;
@@ -20,5 +20,5 @@ if (_getVehicle isKindOf "LandVehicle") then
 	_getVehicle allowDamage true;
 	hint "Vehicle Flipped!";
 } else {
-	hint "You are not looking at a vehicle!";
+	hint "You are not looking at a vehicle or you are too far away!";
 };
