@@ -8,5 +8,6 @@ class Wall_PRTests
 		class heal {};
 		class earplug {};
 		class setColour {};
+		class repair {};
 	};
 };
