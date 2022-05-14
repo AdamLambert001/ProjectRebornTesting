@@ -1,5 +1,8 @@
 class Organs 
 {
+	class masterOrgans{
+		allOrgans[] = {"Heart","Lungs","Brain","Kidneys"};
+	};
 	class Heart {
 		displayname = "Heart";
 		price = 1;

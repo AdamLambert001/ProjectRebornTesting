@@ -8,13 +8,8 @@ private _unit = player;
 private _corpse = cursorObject;
 private _items = player getVariable "RR_virtualItems";
 private _harvestTime = 2;
-private _organList = 
-[
-	"Heart",
-	"Lungs",
-	"Brain",
-	"Kidneys"
-];
+private _organList = getArray(missionConfigFile >> "Organs" >> "masterOrgans" >> "allOrgans");
+private _collectedOrgans = [];
 
 // checks if unit is dead, organ taker is not in car and the corpse is a character.
 if !(isNull objectParent _unit) exitWith {hint "You are in a vehicle!"};
@@ -24,9 +19,14 @@ if (_corpse getVariable "_isHarvested") exitWith {hint "Corpse has no organs lef
 
 // gets and pushes organs to the RR variable.
 for "_organs" from 0 to (random [2,4,5]) do {
-	_items pushBack (missionConfigFile >> "Organs" >> (selectRandom _organList));
-	player setVariable ["RR_virtualItems", _items];
+	_items pushBackUnique (selectRandom _organList);
 };
+
+//add onto the array
+{
+	_items pushBack _x;
+} forEach _collectedOrgans;
+player setVariable ["RR_virtualItems", _items];
 
 //loop animation
 for "_i" from 0 to (_harvestTime * 4) do 
@@ -40,6 +40,6 @@ for "_i" from 0 to (_harvestTime * 4) do
 
 //make the body unharvestable after the original harvest.
 _corpse setVariable ["_isHarvested", true];
-hint "taking organs";
+//hint "taking organs";
 
-//hint format ["%1", _items];
+hint format ["%1", _items];
