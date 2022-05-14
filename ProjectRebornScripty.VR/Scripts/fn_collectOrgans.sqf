@@ -1,5 +1,5 @@
 /*
-file: fn_heal.sqf
+file: fn_collectOrgans.sqf
 Auth: Wallace & Pixie Garfunkel
 Description: A gathering script of organs off dead bodies. has a chance of multiple & random types
 of organs. 

@@ -1,3 +1,9 @@
+/*
+file: fn_sellOrgans.sqf
+Auth: Wallace
+Description: sells said organs to the sign post in mission. Returns a sell value and clears the var.
+*/
+
 private _items = player getVariable "RR_virtualItems";
 private _sellingItems = _items;
 private _totalProfit = 0;
