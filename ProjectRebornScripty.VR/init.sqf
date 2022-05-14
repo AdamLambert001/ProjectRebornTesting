@@ -9,3 +9,6 @@ this addAction ["LD 5", "call PR_fnc_saveLoadout", 4];*/
 player addAction ["unflip", "call PR_fnc_unflip"];
 player addAction ["repair", "call PR_fnc_repair"];
 player addAction ["heal", "call PR_fnc_heal"];
+player addAction ["Colect Organs", "call PR_fnc_collectOrgans"];
+
+player setVariable ["RR_virtualItems", []];

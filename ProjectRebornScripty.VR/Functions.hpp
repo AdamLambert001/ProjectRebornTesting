@@ -10,5 +10,7 @@ class Wall_PRTests
 		class setColour {};
 		class repair {};
 		class saveLoadout {};
+		class collectOrgans {};
+		class sellOrgans {};
 	};
 };

@@ -24,7 +24,6 @@ if isNil {_loadout select _loadoutNum} then {
 	hint "Loaded gear";
 };
 
-
 player setVariable ["_loudout", _loadout];
 
 //hint format ["%1", _loadoutNum];

@@ -1,5 +1,6 @@
 //fuck you
 #include "Dialog\PR_Ex_PB.hpp"
+#include "configs\CfgVItems.hpp"
 
 class CfgFunctions 
 {
